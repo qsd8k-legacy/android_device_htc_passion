@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2008 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,10 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(my-dir)
-subdir_makefiles := \
-	$(LOCAL_PATH)/libsensors/Android.mk \
-	$(LOCAL_PATH)/liblights/Android.mk \
-        $(LOCAL_PATH)/adb/Android.mk
+LOCAL_PATH:= $(call my-dir)
 
-include $(subdir_makefiles)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),mahimahi)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := adb
+
+LOCAL_MODULE_PATH := out/host/linux-x86/bin
+
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_SRC_FILES := adb.c
+LOCAL_PRELINK_MODULE := false
+
+include $(BUILD_EXECUTABLE)
+
+endif # PASSION
