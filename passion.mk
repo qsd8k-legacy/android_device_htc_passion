@@ -54,6 +54,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ksm.default=1
 
+#Stlport
+PRODUCT_PACKAGES += \
+    libstlport
+
 # Use swap
 PRODUCT_COPY_FILES += \
     device/htc/passion/prebuilt/swap/handle_swap:system/bin/handle_swap.sh
