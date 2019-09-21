@@ -114,6 +114,10 @@ PRODUCT_COPY_FILES += \
     device/htc/passion/rootdir/fstab.mahimahi:root/fstab.mahimahi \
     device/htc/passion/rootdir/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
 
+#init.d
+PRODUCT_COPY_FILES += \
+    device/htc/passion/configs/init.d/01swap:system/etc/init.d/01swap
+
 # Prebuilt files/configs
 PRODUCT_COPY_FILES += \
     device/htc/passion/configs/mahimahi-keypad.kl:system/usr/keylayout/mahimahi-keypad.kl \
