@@ -73,6 +73,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # This is needed for the usb workaround
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mass_storage
+    
+#DEX2OAT
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-swap=true
 
 #
 # Packages required for passion
