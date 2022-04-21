@@ -120,6 +120,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+POLICYVERS := 28
 
 # Legacy ril (for CM)
 LEGACY_RIL := true
